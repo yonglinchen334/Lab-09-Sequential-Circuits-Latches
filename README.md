@@ -19,7 +19,10 @@ In this lab, we played a little bit with a memory system implementation using a 
 ## Lab Questions
 
 ###  Why can we not just use structural Verilog to implement latches?
+Technically, you can use structural verilog but it is not ideal for latches because structural verilog describes the connections rather than the behavior. In addtion, synthesis tools don't always guarantee they'll infer the latch that you are intending and timing analysis becomes a nightmare. 
 
 ### What is the meaning of always @(*) in a sensitivity block?
+The "@(*)" is used to mean "include all signals read from inside this block" and decalres the block as combinational. This alsp helps prevent mismatches. 
 
 ### What importance is memory to digital circuits?
+Memory is important to digital circuits because without memory there is not way to saving data or the previous state of a program. It also help enable time-dependent behaviors. 
